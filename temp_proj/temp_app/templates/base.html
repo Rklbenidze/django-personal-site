@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Cota zangi website{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1>My website</h1>
+        <nav>
+            <a href="{% url 'info' %}">about me</a>
+            <a href="{% url 'hobbies' %}">my hobbies</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+</body>
+</html>
